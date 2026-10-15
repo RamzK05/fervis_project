@@ -1,21 +1,32 @@
-<<<<<<< HEAD
-# fervis_project
+# BayanSense
 
-A new Flutter project.
+## Your Approved Project Title
 
-## Getting Started
+**A Multilingual Barangay Environmental and Infrastructure Concern Classification and Routing System Using Natural Language Processing (BayanSense)**
 
-This project is a starting point for a Flutter application.
+## Summary
 
-A few resources to get you started if this is your first Flutter project:
+BayanSense aims to help residents report environmental and infrastructure concerns in their barangay. The proposed system will use Natural Language Processing (NLP) to classify submitted concerns and route them to the appropriate barangay personnel or department.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+The first development checkpoint focuses on the Flutter web interface, including the landing page, login screen, and reusable UI components. Future features will include multilingual concern submission, automatic classification, request routing, and PostgreSQL database integration.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# fervis_project
->>>>>>> dbd645b04c321d5faa0275ef210621057c78560b
+## Current Stack
+
+- **Frontend:** Flutter Web and Dart
+- **Backend:** Planned REST API
+- **Database:** PostgreSQL (planned)
+- **Development Tools:** Visual Studio Code, Git, and GitHub
+
+## Run Locally
+
+Make sure Flutter is installed and configured on your computer.
+
+```bash
+flutter pub get
+flutter run -d chrome
+```
+
+## First Checkpoint
+
+- **Date:** October 15, 2026
+- **Commit:** `81439b5` — Merge remote README with local project
