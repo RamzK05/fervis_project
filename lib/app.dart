@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/report_form_screen.dart';
 
 class BayanSenseApp extends StatelessWidget {
   const BayanSenseApp({super.key});
@@ -23,6 +24,7 @@ class BayanSenseApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
+        '/report': (context) => const ReportFormScreen(),
       },
     );
   }

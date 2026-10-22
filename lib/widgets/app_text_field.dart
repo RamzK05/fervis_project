@@ -9,6 +9,8 @@ class AppTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool obscureText;
   final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
+  final int maxLines;
 
   const AppTextField({
     super.key,
@@ -19,6 +21,8 @@ class AppTextField extends StatelessWidget {
     this.suffixIcon,
     this.obscureText = false,
     this.keyboardType,
+    this.validator,
+    this.maxLines = 1,
   });
 
   @override
@@ -35,15 +39,16 @@ class AppTextField extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        TextField(
+        TextFormField(
           controller: controller,
           obscureText: obscureText,
           keyboardType: keyboardType,
+          validator: validator,
+          maxLines: obscureText ? 1 : maxLines,
           decoration: InputDecoration(
             hintText: hint,
-            prefixIcon: prefixIcon == null
-                ? null
-                : Icon(prefixIcon),
+            prefixIcon:
+                prefixIcon == null ? null : Icon(prefixIcon),
             suffixIcon: suffixIcon,
             filled: true,
             fillColor: const Color(0xFFF8FAF9),

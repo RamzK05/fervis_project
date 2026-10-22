@@ -65,7 +65,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(isWideScreen ? 48 : 28),
+                    padding: EdgeInsets.all(
+                      isWideScreen ? 48 : 28,
+                    ),
                     decoration: BoxDecoration(
                       color: const Color(0xFFE5F3EF),
                       borderRadius: BorderRadius.circular(28),
@@ -73,17 +75,24 @@ class HomeScreen extends StatelessWidget {
                     child: isWideScreen
                         ? Row(
                             children: [
-                              Expanded(child: _buildHeroText(context)),
+                              Expanded(
+                                child: _buildHeroText(context),
+                              ),
                               const SizedBox(width: 32),
-                              Expanded(child: _buildHeroIllustration()),
+                              Expanded(
+                                child: _buildHeroIllustration(),
+                              ),
                             ],
                           )
                         : Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.start,
                             children: [
                               _buildHeroText(context),
                               const SizedBox(height: 30),
-                              Center(child: _buildHeroIllustration()),
+                              Center(
+                                child: _buildHeroIllustration(),
+                              ),
                             ],
                           ),
                   ),
@@ -166,7 +175,9 @@ class HomeScreen extends StatelessWidget {
                         const Text(
                           'Log in to explore the BayanSense experience.',
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Color(0xFF647571)),
+                          style: TextStyle(
+                            color: Color(0xFF647571),
+                          ),
                         ),
                         const SizedBox(height: 20),
                         SizedBox(
@@ -175,7 +186,26 @@ class HomeScreen extends StatelessWidget {
                             label: 'Continue to Login',
                             icon: Icons.arrow_forward_rounded,
                             onPressed: () {
-                              Navigator.pushNamed(context, '/login');
+                              Navigator.pushNamed(
+                                context,
+                                '/login',
+                              );
+                            },
+                          ),
+                        ),
+
+                        // Activity 9: Open the Report Form.
+                        const SizedBox(height: 12),
+                        SizedBox(
+                          width: 220,
+                          child: AppButton(
+                            label: 'Submit a Concern',
+                            icon: Icons.campaign_outlined,
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                context,
+                                '/report',
+                              );
                             },
                           ),
                         ),
@@ -289,7 +319,9 @@ class HomeScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFFE5ECE9)),
+        border: Border.all(
+          color: const Color(0xFFE5ECE9),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -301,7 +333,11 @@ class HomeScreen extends StatelessWidget {
               color: const Color(0xFFE5F3EF),
               borderRadius: BorderRadius.circular(15),
             ),
-            child: Icon(icon, color: primaryColor, size: 27),
+            child: Icon(
+              icon,
+              color: primaryColor,
+              size: 27,
+            ),
           ),
           const SizedBox(height: 18),
           Text(
